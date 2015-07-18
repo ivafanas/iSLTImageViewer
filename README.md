@@ -8,6 +8,7 @@ The main idea is to be extra simple.
 - No status bar handling
 - No only-modal-viewing!
 - No text which does not fit in style of your app.
+
 All of this is the responsibility of external code. And it is the choice of user.
 
 Just view image. And do it gracefully.
