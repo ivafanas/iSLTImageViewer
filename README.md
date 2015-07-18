@@ -36,5 +36,8 @@ Part of the code in parent view controller
 }
 ```
 
+## Requirements
+* Tested on iOS 7.1 and higher
+
 ## License
 MIT License
