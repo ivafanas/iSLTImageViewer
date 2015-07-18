@@ -28,11 +28,11 @@ Part of the code in parent view controller
 	SLTImgViewerVC *vc = [[SLTImgViewerVC alloc] initWithImage:img];
 	vc.dismissDelegate = self;
 
-	[vc willMoveToParentViewController:self];
+	[self addChildViewController:vc];
 	vc.view.frame = self.view.bounds;
 	vc.view.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
 	[self.view addSubview:vc.view];
-	[self addChildViewController:vc];
+	[vc didMoveToParentViewController:self];
 }
 ```
 
