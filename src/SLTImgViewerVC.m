@@ -45,6 +45,20 @@ static const CGFloat kSLTMinimumFlickDismissalVelocity = 800.0f;
 	return self;
 }
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	NSCParameterAssert(false);
+	self = [self initWithImage:nil];
+	return self;
+}
+
+- (instancetype)initWithCoder:(NSCoder *)aDecoder
+{
+	NSCParameterAssert(false);
+	self = [self initWithImage:nil];
+	return self;
+}
+
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self
@@ -138,7 +152,7 @@ static const CGFloat kSLTMinimumFlickDismissalVelocity = 800.0f;
 	}
 }
 
-- (NSUInteger)supportedInterfaceOrientations
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations
 {
 	/*
 	 iOS 8 changes the behavior of autorotation when presenting a
@@ -162,7 +176,7 @@ static const CGFloat kSLTMinimumFlickDismissalVelocity = 800.0f;
 			case UIInterfaceOrientationLandscapeRight: return UIInterfaceOrientationMaskLandscapeRight;
 			case UIInterfaceOrientationPortrait:       return UIInterfaceOrientationMaskPortrait;
 			case UIInterfaceOrientationPortraitUpsideDown: return UIInterfaceOrientationMaskPortraitUpsideDown;
-			default: return UIInterfaceOrientationPortrait;
+			default: return UIInterfaceOrientationMaskPortrait;
 		}
 	}
 
