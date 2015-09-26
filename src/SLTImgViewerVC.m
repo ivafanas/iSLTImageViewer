@@ -45,20 +45,6 @@ static const CGFloat kSLTMinimumFlickDismissalVelocity = 800.0f;
 	return self;
 }
 
-- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-	NSCParameterAssert(false);
-	self = [self initWithImage:nil];
-	return self;
-}
-
-- (instancetype)initWithCoder:(NSCoder *)aDecoder
-{
-	NSCParameterAssert(false);
-	self = [self initWithImage:nil];
-	return self;
-}
-
 - (void)dealloc
 {
 	[[NSNotificationCenter defaultCenter] removeObserver:self
